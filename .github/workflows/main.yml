@@ -30,7 +30,7 @@ jobs:
           context: ./backend
           file: ./backend/backend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-backend:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/dockerbob-backend:latest
 
       - name: Build and push frontend image
         uses: docker/build-push-action@v5
@@ -38,5 +38,5 @@ jobs:
           context: ./frontend
           file: ./frontend/frontend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-frontend:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/dockerbob-frontend:latest
 
